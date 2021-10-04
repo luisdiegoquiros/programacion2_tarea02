@@ -46,5 +46,5 @@ std::ostream& operator << (std::ostream &o, const Nodo &nodo)
 
 
 Empleado* Nodo::obtenerEmpleado (){
-    return this->empleado
+    return this->empleado;
 }
