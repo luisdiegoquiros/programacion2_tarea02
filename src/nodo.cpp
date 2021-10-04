@@ -1,16 +1,20 @@
 #include "nodo.h"
 #include <iostream>
 
-Nodo::Nodo(int id, Empleado *empleado)
+Nodo::Nodo(int id, Empleado * nuevoEmpleado)
 {
     this->id = id;
-    this->empleado = empleado;
+    this->empleado = nuevoEmpleado;
+     std::clog << "Nuevo nodo con el empleado " << nuevoEmpleado << std::endl;
 }
 
 Nodo::~Nodo()
 {
     std::clog << "Borrando nodo " << this->id << std::endl;
 
+   
+    delete this->empleado;
+    
     for (Nodo* hijo : this->subordinados)
     {
         delete hijo;
