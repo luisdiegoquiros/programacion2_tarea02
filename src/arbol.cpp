@@ -35,16 +35,16 @@ void Arbol::agregarNodo(int id,
     //Tipo_Empleado será 1 para empleado de nómina y 2 para profesional por horas.
     if (tipoEmpleado == 1)
     {
-        EmpleadoAsalariado *empleado = new EmpleadoAsalariado(nombre, apellido, email);
+        empleado = new EmpleadoAsalariado(nombre, apellido, email);
     }
     else if (tipoEmpleado == 2)
     {
-        EmpleadoPorHoras *empleado = new EmpleadoPorHoras(nombre, apellido, email);
+        empleado = new EmpleadoPorHoras(nombre, apellido, email);
     }
     else
     {
         //Si el tipo de empleado no es ni 1 ni 2 se asume que es empleado asalariado.
-        EmpleadoAsalariado *empleado = new EmpleadoAsalariado(nombre, apellido, email);
+        empleado = new EmpleadoAsalariado(nombre, apellido, email);
     }
 
     Nodo *nodo = new Nodo(id, empleado);
