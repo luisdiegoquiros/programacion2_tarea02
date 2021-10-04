@@ -9,7 +9,8 @@ class Empleado {
         Empleado(std::string nombre, std::string apellido, std::string email);
 
     public:
-        ~Empleado() {}
+        ~Empleado();
+        std::string obtenerNombreCompleto();
 
     private:
         std::string nombre;
