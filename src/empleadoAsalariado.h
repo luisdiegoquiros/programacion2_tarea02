@@ -12,6 +12,7 @@ private:
 
 public:
     EmpleadoAsalariado(std::string nombre, std::string apellido, std::string email);
+    void establecerSalarioBruto(float salario);
 };
 
 #endif

@@ -6,3 +6,9 @@ EmpleadoAsalariado::EmpleadoAsalariado(std::string nombre,
 {
 
 }
+
+
+
+void EmpleadoAsalariado::establecerSalarioBruto(float salario){
+    this->salarioBruto = salario;
+}
