@@ -13,6 +13,7 @@ private:
 
 public:
     EmpleadoPorHoras(std::string nombre, std::string apellido, std::string email);
+    void establecerPago(float montoPorHora, int horasLaboradas);
 };
 
 #endif

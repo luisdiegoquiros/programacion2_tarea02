@@ -6,3 +6,9 @@ EmpleadoPorHoras::EmpleadoPorHoras(std::string nombre,
 {
     
 }
+
+
+ void EmpleadoPorHoras::establecerPago(float montoPorHora, int horasLaboradas){
+     this->tarifaPorHoras = montoPorHora;
+     this->horasLaboradas = horasLaboradas;
+ }
