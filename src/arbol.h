@@ -21,6 +21,9 @@ class Arbol {
 
     void cargarSalarios(std::istream &inputStream);
 
+    void cargarHorasTrabajadas(std::istream &inputStream);
+    
+
 
 
     ///friend std::ostream& operator << (std::ostream &o, const Arbol &arbol);

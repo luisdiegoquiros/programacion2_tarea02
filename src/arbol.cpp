@@ -123,6 +123,34 @@ void Arbol::cargarSalarios(std::istream &inputStream)
     }
 }
 
+
+void Arbol::cargarHorasTrabajadas(std::istream &inputStream)
+{
+    std::cout << "Se inicia la carga de horas trabajadas: " << std::endl;
+    std::string linea{""};
+
+    int idEmpleado{0};
+    float tarifa{0.0};
+    int horas{0};
+
+    while (std::getline(inputStream, linea))
+    {
+
+        idEmpleado = 0;
+        tarifa = 0.0;
+        horas = 0;
+
+        std::istringstream stream(linea);
+        stream >> idEmpleado >> tarifa >> horas;
+
+        std::cout << "Datos de las horas a cargar: ";
+        std::cout << idEmpleado << " * " << tarifa << " * " << horas << std::endl;
+
+        //Obtiene el nodo y actualiza la información del salario del empleado.
+        Nodo *nodo = this->planilla.at(idEmpleado);
+        nodo->obtenerEmpleado()->establecerPago(tarifa, horas);
+    }
+}
 /*
 
 std::ostream &operator<<(std::ostream &o, const Arbol &arbol)
