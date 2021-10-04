@@ -3,19 +3,22 @@
 
 #include <string>
 
-class Empleado {
-    
-    protected:
-        Empleado(std::string nombre, std::string apellido, std::string email);
+class Empleado
+{
 
-    public:
-        ~Empleado();
-        std::string obtenerNombreCompleto();
+protected:
+    Empleado(std::string nombre, std::string apellido, std::string email);
 
-    private:
-        std::string nombre;
-        std::string apellido;
-        std::string email;
+public:
+    ~Empleado();
+    std::string obtenerNombreCompleto();
+    virtual void establecerPago(float salario) {};
+    virtual void establecerPago(float montoPorHora, int horasLaboradas){};
+
+private:
+    std::string nombre;
+    std::string apellido;
+    std::string email;
 };
 
 #endif
