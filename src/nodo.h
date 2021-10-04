@@ -15,6 +15,8 @@ class Nodo {
     Nodo(int id, Empleado *empleado);
     ~Nodo();
 
+    Empleado* obtenerEmpleado ();
+
     void AgregarHijo(Nodo *hijo);
 
     friend std::ostream& operator << (std::ostream &o, const Nodo &nodo);

@@ -5,7 +5,6 @@ Nodo::Nodo(int id, Empleado * nuevoEmpleado)
 {
     this->id = id;
     this->empleado = nuevoEmpleado;
-     std::clog << "Nuevo nodo con el empleado " << nuevoEmpleado << std::endl;
 }
 
 Nodo::~Nodo()
@@ -43,4 +42,9 @@ std::ostream& operator << (std::ostream &o, const Nodo &nodo)
     }
 
     return o;
+}
+
+
+Empleado* Nodo::obtenerEmpleado (){
+    return this->empleado
 }
