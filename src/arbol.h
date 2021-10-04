@@ -19,6 +19,10 @@ class Arbol {
 
     void cargarPersonas(std::istream &inputStream);
 
+    void cargarSalarios(std::istream &inputStream);
+
+
+
     ///friend std::ostream& operator << (std::ostream &o, const Arbol &arbol);
     ///friend std::istream& operator >> (std::istream &i, Arbol &arbol);
 };
