@@ -17,7 +17,8 @@ Empleado::~Empleado() {
 
 
 std::string Empleado::obtenerNombreCompleto(){
-    return this->nombre;
+    std::string nombreCompleto = this->nombre + " " + this->apellido;
+    return nombreCompleto;
 }
 
 
