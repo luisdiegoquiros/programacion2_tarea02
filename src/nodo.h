@@ -8,12 +8,12 @@
 class Nodo {
 
     int id;
-    int idSupervisor;
+    Nodo* nodoSupervisor;
     Empleado *empleado;
     std::vector<Nodo *> subordinados;
     
     public:
-    Nodo(int id, Empleado *empleado, int idSupervisor);
+    Nodo(int id, Empleado *empleado, Nodo* nodoSupervisor);
     ~Nodo();
 
     Empleado* obtenerEmpleado ();
