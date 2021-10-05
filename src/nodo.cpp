@@ -29,10 +29,10 @@ void Nodo::AgregarHijo(Nodo *hijo) {
 std::ostream& operator << (std::ostream &o, const Nodo &nodo)
 {
     // Imprimir información del nodo
-    o << "Nodo: ";
     o << nodo.id;
-    o << ". Valor: ";
-    o << nodo.empleado;
+    o << ",";
+    o << nodo.empleado->obtenerNombreCompleto();
+    o << ",";
     o << std::endl;
 
     // Imprimir información de cada hijo
