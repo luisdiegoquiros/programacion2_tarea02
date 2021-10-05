@@ -16,3 +16,8 @@ EmpleadoPorHoras::EmpleadoPorHoras(std::string nombre,
  float EmpleadoPorHoras::obtenerMontoPorPagar(){
      return tarifaPorHoras*horasLaboradas;
  }
+
+
+ float EmpleadoPorHoras::obtenerImpuestosPorRetener(){
+     return 0;
+ }

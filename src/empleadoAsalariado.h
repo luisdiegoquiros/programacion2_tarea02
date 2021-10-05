@@ -15,6 +15,7 @@ public:
     void establecerSalarioBruto(float salario);
     void establecerPago(float salario);
     float obtenerMontoPorPagar();
+    float obtenerImpuestosPorRetener();
 };
 
 #endif

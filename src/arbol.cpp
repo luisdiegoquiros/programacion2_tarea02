@@ -47,17 +47,21 @@ void Arbol::agregarNodo(int id,
         empleado = new EmpleadoAsalariado(nombre, apellido, email);
     }
 
-    Nodo *nodo = new Nodo(id, empleado);
+    
+    Nodo *nodo = nullptr;
 
     // Si idPadre = 0, es el nodo raíz
     if (idSupervisor == 0)
     {
+        nodo = new Nodo(id, empleado, nullptr);
         this->director = nodo;
     }
     else
     {
         // Buscar ese nodo supervisor
         Nodo *nodoSupervisor = this->planilla.at(idSupervisor);
+
+        nodo = new Nodo(id, empleado, nodoSupervisor);
         nodoSupervisor->AgregarHijo(nodo);
     }
 
@@ -154,7 +158,25 @@ void Arbol::cargarHorasTrabajadas(std::istream &inputStream)
 void Arbol::generarReporte(std::ostream &outputStream)
 {
     outputStream << *(this->director);
+    // Imprimir totales
+    outputStream << this->obtenerMontoPorPagar();
+    outputStream << ",";
+    outputStream << this->obtenerImpuestosPorRetener();
+    outputStream << ",";
+    outputStream << ( this->obtenerMontoPorPagar() + this->obtenerImpuestosPorRetener());
 }
+
+
+float Arbol::obtenerMontoPorPagar(){
+    return this->director->obtenerTotalPorPagar();
+}
+
+float Arbol::obtenerImpuestosPorRetener(){
+    return this->director->obtenerImpuestosPorRetener();
+}
+
+
+
 
 /*
 

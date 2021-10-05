@@ -21,3 +21,8 @@ void EmpleadoAsalariado::establecerPago(float salario)
 float EmpleadoAsalariado::obtenerMontoPorPagar(){
     return salarioBruto * 0.93; //Si se retiene el 7%, el salario neto es el 93%
 }
+
+
+float EmpleadoAsalariado::obtenerImpuestosPorRetener(){
+    return salarioBruto * 0.07; //Se retiene el 7%
+}

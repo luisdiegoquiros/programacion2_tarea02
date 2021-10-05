@@ -25,6 +25,8 @@ class Arbol {
 
     void generarReporte(std::ostream &outputStream);
     
+    float obtenerMontoPorPagar();
+    float obtenerImpuestosPorRetener();
 
 
 

@@ -15,6 +15,8 @@ public:
     virtual void establecerPago(float salario) {};
     virtual void establecerPago(float montoPorHora, int horasLaboradas){};
     virtual float obtenerMontoPorPagar()=0;
+    virtual float obtenerImpuestosPorRetener()=0;
+
 
 private:
     std::string nombre;
