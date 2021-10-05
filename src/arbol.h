@@ -22,6 +22,8 @@ class Arbol {
     void cargarSalarios(std::istream &inputStream);
 
     void cargarHorasTrabajadas(std::istream &inputStream);
+
+    void generarReporte(std::ostream &outputStream);
     
 
 

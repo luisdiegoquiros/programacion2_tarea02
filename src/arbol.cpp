@@ -123,7 +123,6 @@ void Arbol::cargarSalarios(std::istream &inputStream)
     }
 }
 
-
 void Arbol::cargarHorasTrabajadas(std::istream &inputStream)
 {
     std::cout << "Se inicia la carga de horas trabajadas: " << std::endl;
@@ -151,6 +150,12 @@ void Arbol::cargarHorasTrabajadas(std::istream &inputStream)
         nodo->obtenerEmpleado()->establecerPago(tarifa, horas);
     }
 }
+
+void Arbol::generarReporte(std::ostream &outputStream)
+{
+    outputStream << *(this->director);
+}
+
 /*
 
 std::ostream &operator<<(std::ostream &o, const Arbol &arbol)
