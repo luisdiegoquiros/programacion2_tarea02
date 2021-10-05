@@ -10,7 +10,7 @@
 Arbol::Arbol()
 {
     this->director = nullptr;
-    std::cout << "Se crea el arbol vació" << std::endl;
+    //std::cout << "Se crea el arbol vació" << std::endl;
 }
 
 Arbol::~Arbol()
@@ -175,11 +175,6 @@ float Arbol::obtenerImpuestosPorRetener(){
     return this->director->obtenerImpuestosPorRetener();
 }
 
-
-
-
-/*
-
 std::ostream &operator<<(std::ostream &o, const Arbol &arbol)
 {
     Nodo *raiz = arbol.director;
@@ -188,6 +183,8 @@ std::ostream &operator<<(std::ostream &o, const Arbol &arbol)
     return o;
 }
 
+
+/*
 std::istream &operator>>(std::istream &i, Arbol &arbol)
 {
     std::string linea{""};

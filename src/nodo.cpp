@@ -10,7 +10,7 @@ Nodo::Nodo(int id, Empleado *nuevoEmpleado, Nodo *nodoSupervisor)
 
 Nodo::~Nodo()
 {
-    std::clog << "Borrando nodo " << this->id << std::endl;
+    //std::clog << "Borrando nodo " << this->id << std::endl;
 
     delete this->empleado;
 
@@ -19,7 +19,7 @@ Nodo::~Nodo()
         delete hijo;
     }
 
-    std::clog << "Termina de borrar nodo " << this->id << std::endl;
+    //std::clog << "Termina de borrar nodo " << this->id << std::endl;
 }
 
 void Nodo::AgregarHijo(Nodo *hijo)

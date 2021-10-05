@@ -14,6 +14,7 @@ class Arbol {
     public:
     Arbol();
     ~Arbol();
+
     void agregarNodo(int id, std::string nombre, std::string apellido, std::string email, int tipoEmpleado, int idSupervisor);
 
 
@@ -30,7 +31,7 @@ class Arbol {
 
 
 
-    ///friend std::ostream& operator << (std::ostream &o, const Arbol &arbol);
+    friend std::ostream& operator << (std::ostream &o, const Arbol &arbol);
     ///friend std::istream& operator >> (std::istream &i, Arbol &arbol);
 };
 
