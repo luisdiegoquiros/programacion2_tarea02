@@ -12,3 +12,7 @@ EmpleadoPorHoras::EmpleadoPorHoras(std::string nombre,
      this->tarifaPorHoras = montoPorHora;
      this->horasLaboradas = horasLaboradas;
  }
+
+ float EmpleadoPorHoras::obtenerMontoPorPagar(){
+     return tarifaPorHoras*horasLaboradas;
+ }

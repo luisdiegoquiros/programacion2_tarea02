@@ -14,6 +14,7 @@ public:
     EmpleadoAsalariado(std::string nombre, std::string apellido, std::string email);
     void establecerSalarioBruto(float salario);
     void establecerPago(float salario);
+    float obtenerMontoPorPagar();
 };
 
 #endif

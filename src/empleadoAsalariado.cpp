@@ -17,3 +17,7 @@ void EmpleadoAsalariado::establecerPago(float salario)
 {
     this->establecerSalarioBruto(salario);
 }
+
+float EmpleadoAsalariado::obtenerMontoPorPagar(){
+    return salarioBruto * 0.93; //Si se retiene el 7%, el salario neto es el 93%
+}
