@@ -19,6 +19,8 @@ class Nodo {
     Empleado* obtenerEmpleado ();
 
     void AgregarHijo(Nodo *hijo);
+    float obtenerTotalPorPagar();
+    float obtenerImpuestosPorRetener();
 
     friend std::ostream& operator << (std::ostream &o, const Nodo &nodo);
 };

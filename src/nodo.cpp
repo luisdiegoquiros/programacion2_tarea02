@@ -36,7 +36,7 @@ std::ostream &operator<<(std::ostream &o, const Nodo &nodo)
     o << ",";
 
     //Sino tiene supervisor, el supervisor es él mismo.
-    if(nodo.nodoSupervisor)
+    if (nodo.nodoSupervisor)
         o << nodo.nodoSupervisor->obtenerEmpleado()->obtenerNombreCompleto();
     else
         o << nodo.empleado->obtenerNombreCompleto();
@@ -57,4 +57,32 @@ std::ostream &operator<<(std::ostream &o, const Nodo &nodo)
 Empleado *Nodo::obtenerEmpleado()
 {
     return this->empleado;
+}
+
+float Nodo::obtenerImpuestosPorRetener()
+{
+    float total = 0;
+
+    total = this->empleado->obtenerImpuestosPorRetener();
+
+    for (Nodo *hijo : this->subordinados)
+    {
+        total = total + hijo->obtenerImpuestosPorRetener();
+    }
+
+    return total;
+}
+
+float Nodo::obtenerTotalPorPagar()
+{
+    float total = 0;
+
+    total = this->empleado->obtenerMontoPorPagar();
+
+    for (Nodo *hijo : this->subordinados)
+    {
+        total = total + hijo->obtenerTotalPorPagar();
+    }
+
+    return total;
 }
