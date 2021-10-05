@@ -5,6 +5,7 @@ EmpleadoAsalariado::EmpleadoAsalariado(std::string nombre,
                                        std::string apellido,
                                        std::string email) : Empleado(nombre, apellido, email)
 {
+    this->salarioBruto=0;
 }
 
 void EmpleadoAsalariado::establecerSalarioBruto(float salario)
@@ -19,7 +20,12 @@ void EmpleadoAsalariado::establecerPago(float salario)
 }
 
 float EmpleadoAsalariado::obtenerMontoPorPagar(){
-    return salarioBruto * 0.93; //Si se retiene el 7%, el salario neto es el 93%
+    float total = 0;
+    
+    if (salarioBruto > 0);
+        total = salarioBruto * 0.93;
+    
+    return total; //Si se retiene el 7%, el salario neto es el 93%
 }
 
 
