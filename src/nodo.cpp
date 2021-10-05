@@ -1,10 +1,11 @@
 #include "nodo.h"
 #include <iostream>
 
-Nodo::Nodo(int id, Empleado * nuevoEmpleado)
+Nodo::Nodo(int id, Empleado * nuevoEmpleado, int idSupervisor)
 {
     this->id = id;
     this->empleado = nuevoEmpleado;
+    this->idSupervisor = idSupervisor;
 }
 
 Nodo::~Nodo()
