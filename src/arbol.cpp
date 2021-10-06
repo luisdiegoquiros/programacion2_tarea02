@@ -71,7 +71,7 @@ void Arbol::agregarNodo(int id,
 
 void Arbol::cargarPersonas(std::istream &inputStream)
 {
-    std::cout << "Se inicia la carga de personas" << std::endl;
+    //std::cout << "Se inicia la carga de personas" << std::endl;
     std::string linea{""};
 
     int idEmpleado{0};
@@ -94,8 +94,8 @@ void Arbol::cargarPersonas(std::istream &inputStream)
         std::istringstream stream(linea);
         stream >> idEmpleado >> nombre >> apellido >> email >> tipoEmpleado >> idSupervisor;
 
-        std::cout << "Datos del empleado a cargar: ";
-        std::cout << idEmpleado << " * " << nombre << " * " << apellido << " * " << email << " * " << tipoEmpleado << " * " << idSupervisor << std::endl;
+        //std::cout << "Datos del empleado a cargar: ";
+        //std::cout << idEmpleado << " * " << nombre << " * " << apellido << " * " << email << " * " << tipoEmpleado << " * " << idSupervisor << std::endl;
 
         this->agregarNodo(idEmpleado, nombre, apellido, email, tipoEmpleado, idSupervisor);
     }
