@@ -103,7 +103,7 @@ void Arbol::cargarPersonas(std::istream &inputStream)
 
 void Arbol::cargarSalarios(std::istream &inputStream)
 {
-    std::cout << "Se inicia la carga de salarios" << std::endl;
+    //std::cout << "Se inicia la carga de salarios" << std::endl;
     std::string linea{""};
 
     int idEmpleado{0};
@@ -118,8 +118,8 @@ void Arbol::cargarSalarios(std::istream &inputStream)
         std::istringstream stream(linea);
         stream >> idEmpleado >> salario;
 
-        std::cout << "Datos del salario a cargar: ";
-        std::cout << idEmpleado << " * " << salario << std::endl;
+        //td::cout << "Datos del salario a cargar: ";
+        //std::cout << idEmpleado << " * " << salario << std::endl;
 
         //Obtiene el nodo y actualiza la información del salario del empleado.
         Nodo *nodo = this->planilla.at(idEmpleado);
