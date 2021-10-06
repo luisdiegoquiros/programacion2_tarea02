@@ -11,7 +11,7 @@ EmpleadoAsalariado::EmpleadoAsalariado(std::string nombre,
 void EmpleadoAsalariado::establecerSalarioBruto(float salario)
 {
     this->salarioBruto = salario;
-    std::cout << "Se establece el salario de " << this->obtenerNombreCompleto() << " en " << this->salarioBruto << std::endl;
+    //std::cout << "Se establece el salario de " << this->obtenerNombreCompleto() << " en " << this->salarioBruto << std::endl;
 }
 
 void EmpleadoAsalariado::establecerPago(float salario)
