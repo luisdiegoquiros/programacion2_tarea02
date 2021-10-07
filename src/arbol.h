@@ -5,18 +5,18 @@
 #include <map>
 #include <iostream>
 
-class Arbol {
+class Arbol
+{
 
-    private:
+private:
     Nodo *director;
     std::map<int, Nodo *> planilla;
 
-    public:
+public:
     Arbol();
     ~Arbol();
 
     void agregarNodo(int id, std::string nombre, std::string apellido, std::string email, int tipoEmpleado, int idSupervisor);
-
 
     void cargarPersonas(std::istream &inputStream);
 
@@ -25,15 +25,12 @@ class Arbol {
     void cargarHorasTrabajadas(std::istream &inputStream);
 
     void generarReporte(std::ostream &outputStream);
-    
+
     float obtenerMontoPorPagar();
+
     float obtenerImpuestosPorRetener();
 
-
-
-    friend std::ostream& operator << (std::ostream &o, const Arbol &arbol);
-    ///friend std::istream& operator >> (std::istream &i, Arbol &arbol);
+    friend std::ostream &operator<<(std::ostream &o, const Arbol &arbol);
 };
-
 
 #endif
