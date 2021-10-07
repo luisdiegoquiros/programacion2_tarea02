@@ -182,31 +182,3 @@ std::ostream &operator<<(std::ostream &o, const Arbol &arbol)
 
     return o;
 }
-
-
-/*
-std::istream &operator>>(std::istream &i, Arbol &arbol)
-{
-    std::string linea{""};
-
-    int idNodo{0};
-    int valor{0};
-    int idPadre{0};
-
-    while (std::getline(i, linea))
-    {
-
-        idNodo = 0;
-        valor = 0;
-        idPadre = 0;
-
-        std::istringstream stream(linea);
-        stream >> idNodo >> valor >> idPadre;
-
-        arbol.AgregarNodo(idNodo, valor, idPadre);
-    }
-
-    return i;
-}
-
-*/
