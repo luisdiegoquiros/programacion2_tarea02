@@ -15,7 +15,7 @@ int main()
     Arbol *arbol = new Arbol();
 
     //Carga la información de todas las personas que trabajan en la compañia.
-    std::ifstream archivoPersonas("C:/Personas.txt", std::ifstream::in);
+    std::ifstream archivoPersonas("Personas.txt", std::ifstream::in);
 
     if (!archivoPersonas.is_open())
     {
@@ -28,7 +28,7 @@ int main()
     archivoPersonas.close();
 
     //Carga la información de los salarios de los empleados asalariados.
-    std::ifstream archivoNomina("C:/Nomina.txt", std::ifstream::in);
+    std::ifstream archivoNomina("Nomina.txt", std::ifstream::in);
 
     if (!archivoNomina.is_open())
     {
@@ -39,7 +39,7 @@ int main()
     arbol->cargarSalarios(archivoNomina);
     archivoNomina.close();
     //Carga la información de las horas y tarifas para los empleados por horas.
-    std::ifstream archivoHorasTrabajadas("C:/HorasTrabajadas.txt", std::ifstream::in);
+    std::ifstream archivoHorasTrabajadas("HorasTrabajadas.txt", std::ifstream::in);
 
     if (!archivoHorasTrabajadas.is_open())
     {
@@ -53,7 +53,7 @@ int main()
 
     //Archivo de Salida
 
-    std::ofstream file("C:\\Users\\luis2\\Desktop\\programacion2_tarea02\\reporte.csv", std::ofstream::out);
+    std::ofstream file("reporte.csv", std::ofstream::out);
 
    arbol->generarReporte(file);
   
